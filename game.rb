@@ -5,14 +5,14 @@ class Game
 attr_accessor :Game
 
   def initialize
-    newgame_loopy
-
+    # newgame_loopy
+    start_game
     @current_player = @player1
-    game_over = true
+    # game_over = true
   end
 
-  def newgame_loopy
-    while game_over == true
+  # def newgame_loopy
+  #   while game_over == true
 
       def start_game
         puts "This is a 2 player math game. Instructions: \n\t An addition question is generated each turn \n\t Answer correctly or lose a life.\n\t Each palyer has 3 lives"
@@ -51,8 +51,8 @@ attr_accessor :Game
         congratulate_winner
         game_over
       end
-    end
-  end
+  #   end
+  # end
 
   def congratulate_winner
     puts "Congratz on Winning #{other_player.name} score #{other_player.lives}/3"
@@ -68,17 +68,21 @@ attr_accessor :Game
 
   def game_over
     puts "GAME OVER"
-    puts "play again (y/n)?"
-    res = gets.chomp.to_s
-
-    if (res == 'y' || res =='Y')
-      newgame_loopy
-    elsif (res == 'n' || res == 'N')
-      puts "Good bye!"
-      sleep 1
-    else
-      puts "Enter y/n"
-      res = gets.chomp.to_s
-    end
   end
 end
+#   def game_over
+#     puts "GAME OVER"
+#     puts "play again (y/n)?"
+#     res = gets.chomp.to_s
+
+#     if (res == 'y' || res =='Y')
+#       newgame_loopy
+#     elsif (res == 'n' || res == 'N')
+#       puts "Good bye!"
+#       sleep 1
+#     else
+#       puts "Enter y/n"
+#       res = gets.chomp.to_s
+#     end
+#   end
+# end
